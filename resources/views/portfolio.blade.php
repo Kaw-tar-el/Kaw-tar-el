@@ -75,7 +75,6 @@
     @foreach($projects as $project)
       <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
         
-        <!-- Project Image -->
         <div class="relative group">
           <img src="{{ asset($project->image) }}" alt="{{ $project->title }}" 
                class="w-full h-56 object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-105">
@@ -86,7 +85,6 @@
           @endif
         </div>
 
-        <!-- Project Details -->
         <div class="p-5 flex flex-col justify-between flex-1">
           <div>
             <h3 class="text-xl font-semibold text-fuchsia-900 mb-2">{{ $project->title }}</h3>
@@ -94,7 +92,6 @@
             <p class="text-sm text-gray-500 italic">{{ $project->tools }}</p>
           </div>
 
-          <!-- Buttons -->
           <div class="mt-4 flex gap-3">
             @if($project->demo)
               <a href="{{ $project->demo }}" target="_blank"
